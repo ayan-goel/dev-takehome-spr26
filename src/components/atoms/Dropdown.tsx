@@ -86,7 +86,7 @@ export default function Dropdown({
         onClick={() => !disabled && setIsOpen(!isOpen)}
         disabled={disabled}
         className={`
-          inline-flex items-center justify-between gap-2 px-3 py-2 w-[140px]
+          inline-flex items-center justify-between gap-2 px-3 py-2 w-[150px]
           bg-white border border-gray-stroke rounded-lg
           transition-all duration-200
           hover:bg-primary-fill
@@ -96,7 +96,7 @@ export default function Dropdown({
       >
         <StatusBadge status={value} />
         <svg
-          className={`w-4 h-4 text-gray-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          className={`w-4 h-4 flex-shrink-0 text-gray-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
