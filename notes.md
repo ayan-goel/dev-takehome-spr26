@@ -31,4 +31,41 @@
 
 # Notes
 
-<!-- Notes go here -->
+## Batch Endpoints
+
+### Batch Edit - `PATCH /api/request/batch`
+
+Updates the status of multiple requests at once.
+
+**Request Body:**
+```json
+{
+  "ids": ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439012"],
+  "status": "approved"
+}
+```
+
+**Response:**
+```json
+{
+  "modifiedCount": 2
+}
+```
+
+### Batch Delete - `DELETE /api/request/batch`
+
+Deletes multiple requests at once.
+
+**Request Body:**
+```json
+{
+  "ids": ["507f1f77bcf86cd799439011", "507f1f77bcf86cd799439012"]
+}
+```
+
+**Response:**
+```json
+{
+  "deletedCount": 2
+}
+```
